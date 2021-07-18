@@ -32,9 +32,3 @@ export const addCart = async ({produto}) => {
   }
 
  
-
-// const getImageFromBucket = async ( id ) => {
-//     const bucketUrl = "https://serratec-spring-ionic.s3.sa-east-1.amazonaws.com"
-//     const url = `${bucketUrl}/prod${id}-small.jpg`
-//     return url;
-// }

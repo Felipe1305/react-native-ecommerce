@@ -48,7 +48,6 @@ const CategoriaPage = ({ navigation }) => {
     <View style={styles.container}>
       <FlatList
         keyExtractor={(item) => String(item.id)}
-        //   ListFooterComponent={renderFooter}
         style={styles.centeredView}
         data={categorias}
         renderItem={({ item }) => (

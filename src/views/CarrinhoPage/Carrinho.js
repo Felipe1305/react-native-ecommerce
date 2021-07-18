@@ -7,7 +7,6 @@ import {
   TouchableHighlight,
   Image,
   TouchableOpacity,
-  Button,
 } from "react-native";
 
 import HeaderCart from "../../components/headerCart";
@@ -17,7 +16,6 @@ const Carrinho = ({ navigation, route }) => {
   const [num, setNum] = useState(1);
   const [produtos, setProdutos] = useState([]);
   const produto = route.params;
-  // console.log(produto);
   const bucketUrl = "https://serratec-spring-ionic.s3.sa-east-1.amazonaws.com";
 
   const getCarrinho = async () => {
@@ -25,9 +23,7 @@ const Carrinho = ({ navigation, route }) => {
       fetch("http://localhost:8080/produtos/carrinho")
         .then((res) => res.json())
         .then((res) => {
-          // console.log(res+"api")
           setProdutos(res);
-          //  console.log(produtos)
           return res;
         });
     } catch (error) {
@@ -45,7 +41,6 @@ const Carrinho = ({ navigation, route }) => {
       <View style={styles.container}>
         <FlatList
           keyExtractor={(item, index) => String(item.id + index)}
-          //   ListFooterComponent={renderFooter}
           style={styles.centeredView}
           data={produtos}
           renderItem={({ item }) => (
@@ -116,15 +111,12 @@ const styles = StyleSheet.create({
   },
   centeredView: {
     flex: 1,
-    // alignItems: "center",
     marginTop: 30,
     flexDirection: "column",
   },
   cardView: {
     flex: 1,
-    // flexDirection: 'row',
     justifyContent: "space-between",
-    // alignContent: 'center',
     margin: 5,
     backgroundColor: "white",
     borderRadius: 15,

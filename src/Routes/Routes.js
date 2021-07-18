@@ -67,11 +67,9 @@ function MyTabs () {
 
 const Routes = () => {
     return (
-        // <NavigationContainer>
         <Stack.Navigator initialRouteName="CategoriaPage" >
   
         <Stack.Screen name="CategoriaPage" component={CategoriaPage, MyTabs} options={{ headerShown: false}}/>
-        {/* <Stack.Screen name="HomePage" component={HomePage} options={{ headerShown: false}} /> */}
         <Stack.Screen name="Carrinho" component={Carrinho} />
         <Stack.Screen name="Produto" component={Produto} />
         <Stack.Screen name="Detalhes" component={Detalhes} />
@@ -81,7 +79,6 @@ const Routes = () => {
           
   
         </Stack.Navigator>
-      // </NavigationContainer>
     )
 }
 
